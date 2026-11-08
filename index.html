@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Anandhu Ajith | Portfolio</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/ketchup-logo.svg">
+
+<!-- Optional: Browser / mobile icons -->
+<link rel="apple-touch-icon" href="assets/ketchup-logo.svg">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css">
+<script src="site-data.js"></script>
+<script>
+  /* Apply saved theme before first paint (default comes from site-data.js: light) */
+  (function () {
+    var t = (window.SITE && SITE.defaultTheme) || 'light';
+    try { t = localStorage.getItem('theme') || t; } catch (e) {}
+    document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light';
+  })();
+</script>
+</head>
+<body data-page="home">
+<div class="page">
+  <header>
+    <a class="brand" href="index.html" aria-label="Home">&gt;_</a>
+    <nav class="nav" id="nav" aria-label="Main navigation"></nav>
+    <div class="header-tools" id="headerTools"></div>
+  </header>
+
+  <main class="hero" id="home">
+    <section class="intro">
+      <div class="eyebrow">&lt; <span class="accent" id="brandName">anandhuajith</span> /&gt;</div>
+      <div class="tagline" id="tagline"></div>
+      <div class="intro-bottom">
+        <p class="statement" id="statement"></p>
+        <div class="actions" id="actions"></div>
+      </div>
+    </section>
+
+    <div class="portrait-stage" id="portraitStage" aria-label="Portrait">
+      <div class="portrait-glow"></div>
+      <img class="portrait" id="portrait" src="assets/anandhu.png" alt="Portrait of Anandhu" />
+      <div class="glass-card status-card" id="statusCard"></div>
+      <div class="glass-card code-card">
+        <div class="card-top"><span class="mini-prompt">&gt;_</span><span>currently</span></div>
+        <div class="code-line"><span class="code-key">const</span> passion = <span class="code-value">"building"</span>;</div>
+        <div class="code-line"><span class="code-key">while</span> (curious) <span class="code-value">keepGoing()</span>;</div>
+      </div>
+    </div>
+
+    <div class="toolbox" id="toolbox" aria-label="Technologies"></div>
+    <a class="scroll-cue" href="#projects" aria-label="Scroll to projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
+    <div class="signature" id="signature"></div>
+  </main>
+
+  <section class="portfolio-section" id="projects">
+    <div class="section-kicker">Selected work</div>
+    <h2 class="section-title">Things I've been building.</h2>
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <section class="portfolio-section" id="about">
+    <div class="section-kicker" id="aboutKicker"></div>
+    <h2 class="section-title" id="aboutTitle"></h2>
+    <p class="section-copy" id="aboutCopy"></p>
+    <div class="content-glass leadership-panel" id="leadership"></div>
+  </section>
+
+  <section class="portfolio-section" id="skills">
+    <div class="section-kicker" id="skillsKicker"></div>
+    <h2 class="section-title" id="skillsTitle"></h2>
+    <div class="skill-grid" id="skillGrid"></div>
+
+    <div class="hardware-block" id="hardware">
+      <div class="section-kicker" id="hwKicker"></div>
+      <h2 class="section-title" id="hwTitle"></h2>
+      <div id="hwGroups"></div>
+    </div>
+  </section>
+
+  <section class="portfolio-section" id="contact">
+    <div class="content-glass contact-panel">
+      <div>
+        <div class="section-kicker" id="contactKicker"></div>
+        <h2 class="section-title" id="contactTitle" style="margin-bottom:12px"></h2>
+        <p class="section-copy" id="contactCopy" style="margin:0"></p>
+      </div>
+      <div class="contact-links" id="contactLinks"></div>
+    </div>
+  </section>
+  <footer id="footerText"></footer>
+</div>
+<noscript><p style="padding:24px;font-family:sans-serif">Please enable JavaScript to view this portfolio.</p></noscript>
+<script src="main.js"></script>
+</body>
+</html>

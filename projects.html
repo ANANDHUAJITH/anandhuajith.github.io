@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>anandhuajith — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="site-data.js"></script>
+<script>
+  /* Apply saved theme before first paint (default comes from site-data.js: light) */
+  (function () {
+    var t = (window.SITE && SITE.defaultTheme) || 'light';
+    try { t = localStorage.getItem('theme') || t; } catch (e) {}
+    document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light';
+  })();
+</script>
+</head>
+<body data-page="showcase">
+<div class="page">
+  <header>
+    <a class="brand" href="index.html" aria-label="Home">&gt;_</a>
+    <nav class="nav" id="nav" aria-label="Main navigation"></nav>
+    <div class="header-tools" id="headerTools"></div>
+  </header>
+
+  <main class="portfolio-section showcase" id="project-showcase">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <div class="section-kicker" id="scKicker"></div>
+    <h1 class="section-title" id="scTitle"></h1>
+    <p class="section-copy" id="scCopy" style="margin-bottom:34px"></p>
+
+    <div class="content-glass feature-banner" id="featureBanner"></div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter projects by area"></div>
+    <div class="result-count" id="resultCount" aria-live="polite"></div>
+    <div class="project-grid" id="projectGrid"></div>
+    <p class="empty-note" id="emptyNote" hidden>No projects in this area yet.</p>
+  </main>
+  <footer id="footerText"></footer>
+</div>
+<noscript><p style="padding:24px;font-family:sans-serif">Please enable JavaScript to view this portfolio.</p></noscript>
+<script src="main.js"></script>
+</body>
+</html>
